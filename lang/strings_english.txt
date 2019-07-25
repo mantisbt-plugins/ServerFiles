@@ -1,0 +1,29 @@
+<?php
+
+# Custom strings for english language
+
+$s_plugin_ServerFiles_title = 'Server Files';
+$s_plugin_ServerFiles_description = 'Edit files directly on server';
+$s_plugin_ServerFiles_config = 'Configuration';
+$s_plugin_ServerFiles_update_config = 'Update Configuration';
+
+$s_plugin_ServerFiles_editor_title = 'Edit Server Files';
+
+$s_plugin_ServerFiles_config_file_title = 'Title';
+$s_plugin_ServerFiles_config_file_location = 'Full Path';
+$s_plugin_ServerFiles_config_file_action = 'Action';
+
+$s_plugin_ServerFiles_new_file_title = 'Title';
+$s_plugin_ServerFiles_new_file_location = 'Full Path';
+
+$s_plugin_ServerFiles_config_new_file = 'Add New File';
+$s_plugin_ServerFiles_config_save_file = 'Save';
+$s_plugin_ServerFiles_config_delete_file = 'Delete';
+$s_plugin_ServerFiles_config_existing = 'Existing Files';
+
+$s_plugin_ServerFiles_no_files_configured = 'No files have been configured';
+$s_plugin_ServerFiles_cannot_open = 'Unable to open file';
+
+$s_plugin_ServerFiles_serverfiles_contents = 'Content';
+$s_plugin_ServerFiles_serverfiles_title = 'File Editor';
+$s_plugin_ServerFiles_serverfiles_save_button = 'Save File';
