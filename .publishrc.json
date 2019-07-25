@@ -7,7 +7,7 @@
         "cmd /c xcopy pages\\* build\\ServerFiles\\pages /s /i /y",
         "cmd /c copy /Y LICENSE.txt build\\ServerFiles",
         "cmd /c copy /Y ServerFiles.php build\\ServerFiles",
-        "Compress-Archive -Path build\\ServerFiles -CompressionLevel Optimal -DestinationPath build\\ServerFiles.zip",
+        "Compress-Archive -Path build\\ServerFiles -Update -CompressionLevel Optimal -DestinationPath build\\ServerFiles.zip",
         "cmd /c rmdir /S /Q build\\ServerFiles"
     ],
     "changelogFile":     "CHANGELOG.md",
