@@ -1,5 +1,15 @@
 # SERVERFILES CHANGE LOG
 
+## Version 1.0.2 (July 29th, 2019)
+
+### Build System
+
+- add config to publishrc for first mantisbt release
+
+### Documentation
+
+- **README:** update ApiExtend badges
+
 ## Version 1.0.1 (July 27th, 2019)
 
 ### Documentation
