@@ -8,6 +8,11 @@ access_ensure_global_level(config_get('edit_threshold_level'));
 $f_file = gpc_get_string('file');
 $f_file_content = gpc_get_string('file_content');
 
+#
+# Make sure proper OS line endings are used
+#
+$f_file_content = str_replace("\r\n", PHP_EOL, $f_file_content);
+
 $t_file = fopen($f_file , "w") or die("Unable to open file for writing");
 if (false === $t_file) {
     trigger_error( ERROR_FILE_DISALLOWED, ERROR );
