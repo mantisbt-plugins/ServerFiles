@@ -1,5 +1,11 @@
 # SERVERFILES CHANGE LOG
 
+## Version 1.0.3 (July 31st, 2019)
+
+### Bug Fixes
+
+- files are saved with carriage returns in the line breaks on non-windows systems
+
 ## Version 1.0.2 (July 29th, 2019)
 
 ### Build System
