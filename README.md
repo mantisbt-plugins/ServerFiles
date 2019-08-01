@@ -5,19 +5,19 @@
 [![app-publisher](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-app--publisher-e10000.svg)](https://github.com/spmeesseman/app-publisher)
 [![authors](https://img.shields.io/badge/authors-scott%20meesseman-6F02B5.svg?logo=visual%20studio%20code)](https://github.com/spmeesseman)
 
-[![GitHub issues open](https://img.shields.io/github/issues-raw/spmeesseman/ServerFiles.svg?maxAge=2592000&logo=github)](https://github.com/spmeesseman/ServerFiles/issues)
-[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/spmeesseman/ServerFiles.svg?maxAge=2592000&logo=github)](https://github.com/spmeesseman/ServerFiles/issues)
+[![GitHub issues open](https://img.shields.io/github/issues-raw/spmeesseman/ServerFiles.svg?maxAge=2592000&logo=github)](https://github.com/mantisbt-plugins/ServerFiles/issues)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/spmeesseman/ServerFiles.svg?maxAge=2592000&logo=github)](https://github.com/mantisbt-plugins/ServerFiles/issues)
 [![MantisBT issues open](https://app1.spmeesseman.com/projects/plugins/ApiExtend/api/issues/countbadge/ServerFiles/open)](https://app1.spmeesseman.com/projects/set_project.php?project=ServerFiles&make_default=no&ref=bug_report_page.php)
 [![MantisBT issues closed](https://app1.spmeesseman.com/projects/plugins/ApiExtend/api/issues/countbadge/ServerFiles/closed)](https://app1.spmeesseman.com/projects/set_project.php?project=ServerFiles&make_default=no&ref=bug_report_page.php)
 [![MantisBT version current](https://app1.spmeesseman.com/projects/plugins/ApiExtend/api/versionbadge/ServerFiles/current)](https://app1.spmeesseman.com/projects/set_project.php?project=ServerFiles&make_default=no&ref=plugin.php?page=Releases/releases)
 [![MantisBT version next](https://app1.spmeesseman.com/projects/plugins/ApiExtend/api/versionbadge/ServerFiles/next)](https://app1.spmeesseman.com/projects/set_project.php?project=ServerFiles&make_default=no&ref=plugin.php?page=Releases/releases)
 
-- [Server Files Editor MantisBT Plugin](#Server-Files-Editor-MantisBT-Plugin)
+- [ServerFiles MantisBT Plugin](#ServerFiles-MantisBT-Plugin)
   - [Description](#Description)
   - [Installation](#Installation)
-  - [Screenshots2](#Screenshots2)
+  - [Screenshots](#Screenshots)
     - [Editor Screen](#Editor-Screen)
-  - [Future Maybes](#Future-Maybes)
+  - [Todos](#Todos)
 
 ## Description
 
@@ -33,11 +33,11 @@ Note the web server must have read access to view the file, and write access to 
 Extract the release archive to the MantisBT installations plugins folder:
 
     cd /var/www/mantisbt/plugins
-    wget -O ServerFiles.zip https://github.com/spmeesseman/Releases/releases/download/v1.0.0/ServerFiles.zip
+    wget -O ServerFiles.zip https://github.com/mantisbt-plugins/ServerFiles/releases/download/v1.0.0/ServerFiles.zip
     unzip ServerFiles.zip
     rm -f ServerFiles.zip
 
-Ensure to use the latest released version number in the download url: [![MantisBT version current](https://app1.spmeesseman.com/projects/plugins/ApiExtend/api/versionbadge/ServerFiles/current)](https://app1.spmeesseman.com/projects) (version badge available via the [ApiExtend Plugin](https://github.com/spmeesseman/ApiExtend))
+Ensure to use the latest released version number in the download url: [![MantisBT version current](https://app1.spmeesseman.com/projects/plugins/ApiExtend/api/versionbadge/ServerFiles/current)](https://app1.spmeesseman.com/projects) (version badge available via the [ApiExtend Plugin](https://github.com/mantisbt-plugins/ApiExtend))
 
 Install the plugin using the default installation procedure for a MantisBT plugin in `Manage -> Plugins`.
 
@@ -47,7 +47,9 @@ Install the plugin using the default installation procedure for a MantisBT plugi
 
 ![Editor Page](res/editor.png)
 
-## Future Maybes
+## Todos
 
-- Support for marking a file read-only
-- Support for re-ordering display of files
+- [ ] Support for marking a file read-only
+- [ ] Support for re-ordering display of files
+- [ ] Support for granting access to files by Mantis access level
+- [ ] Support for granting access to files by user
