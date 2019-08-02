@@ -1,4 +1,8 @@
 <?php
+
+# Copyright (c) 2019 Scott Meesseman
+# Licensed under GPL3 
+
 class ServerFilesPlugin extends MantisPlugin
 {
 	function register() {
