@@ -1,5 +1,6 @@
 <?php
 
+form_security_validate( 'plugin_ServerFiles_serverfiles_edit' );
 auth_reauthenticate();
 
 access_ensure_global_level(config_get('manage_plugin_threshold'));
@@ -20,4 +21,11 @@ if (false === $t_file) {
 $t_bytes = fwrite($t_file, $f_file_content, strlen($f_file_content));
 fclose($t_file);
 
-print_successful_redirect(plugin_page('serverfiles', TRUE));
+form_security_purge( 'plugin_ServerFiles_config_edit' );
+
+$t_redirect_url = plugin_page('serverfiles', TRUE);
+
+layout_page_header( null, $t_redirect_url );
+layout_page_begin();
+html_operation_successful( $t_redirect_url );
+layout_page_end();

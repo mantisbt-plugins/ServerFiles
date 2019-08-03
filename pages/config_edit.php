@@ -1,5 +1,6 @@
 <?php
 
+form_security_validate( 'plugin_ServerFiles_config_edit' );
 auth_reauthenticate();
 
 access_ensure_global_level(config_get('manage_plugin_threshold'));
@@ -43,4 +44,11 @@ if ($rows_affected == 0) {
     trigger_error('Query succeeded but no records affected', ERROR_DB_QUERY_FAILED);
 }
 
-print_successful_redirect(plugin_page('config', TRUE));
+form_security_purge( 'plugin_ServerFiles_config_edit' );
+
+$t_redirect_url = plugin_page('config', TRUE);
+
+layout_page_header( null, $t_redirect_url );
+layout_page_begin();
+html_operation_successful( $t_redirect_url );
+layout_page_end();
