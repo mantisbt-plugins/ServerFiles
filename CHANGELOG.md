@@ -1,5 +1,16 @@
 # SERVERFILES CHANGE LOG
 
+## Version 1.0.4 (August 3rd, 2019)
+
+### Minor Features
+
+- show the success redirect when saving config settings
+
+### Bug Fixes
+
+- form security cookie is not set properly
+- the url in manage plugin page is invalid
+
 ## Version 1.0.3 (July 31st, 2019)
 
 ### Bug Fixes
