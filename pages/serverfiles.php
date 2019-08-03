@@ -52,12 +52,14 @@ $file = fopen($active_file , "r") or die("<br><br> &nbsp;&nbsp&nbsp;&nbsp;&nbsp&
 $file_content = fread($file, filesize($active_file));
 fclose($file);
 
+$form_security_field  = form_security_field( 'plugin_ServerFiles_serverfiles_edit' );
 ?>
 
 <div class="col-xs-12 col-md-8 col-md-offset-2">
    <div class="space-10"></div>
    <div id="config-div" class="form-container">
       <form method="post" enctype="multipart/form-data" action="<?php echo $import_page ?>">
+         <?php echo $form_security_field ?>
          <input type="hidden" name="file" value="<?php echo $active_file ?>">
          <div class="widget-box widget-color-blue2">
             <div class="widget-header widget-header-small">

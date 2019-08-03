@@ -4,9 +4,12 @@ access_ensure_global_level(config_get('manage_plugin_threshold'));
 
 layout_page_header(plugin_lang_get('title'));
 layout_page_begin(__FILE__);
+print_manage_menu( 'manage_plugin_page.php' );
 
 $edit_threshhold = plugin_config_get('edit_threshold_level');
 $view_threshhold = plugin_config_get('view_threshold_level');
+
+$t_form_security_field  = form_security_field( 'plugin_ServerFiles_config_edit' );
 
 ?>
 
@@ -16,6 +19,7 @@ $view_threshhold = plugin_config_get('view_threshold_level');
 	<div class="space-10"></div>
 	<div id="config-div" class="form-container">
 		<form id="config-form" method="post" action="<?php echo plugin_page('config_edit') ?>">
+			<?php echo $t_form_security_field ?>
 			<div class="widget-box widget-color-blue2">
 				<div class="widget-header widget-header-small">
 					<h4 class="widget-title lighter">
@@ -66,6 +70,7 @@ $view_threshhold = plugin_config_get('view_threshold_level');
 		<br><br>
 
 		<form id="newfile-form" method="post" action="<?php echo plugin_page('config_edit') ?>">
+			<?php echo $t_form_security_field ?>
 			<div class="widget-box widget-color-blue2">
 				<div class="widget-header widget-header-small">
 					<h4 class="widget-title lighter">
@@ -138,6 +143,7 @@ $view_threshhold = plugin_config_get('view_threshold_level');
 									$v_title = string_display_line( $v_title );
 								?>
 								<form id="editfile-form-<?php echo $i; ?>" method="post" action="<?php echo plugin_page('config_edit') ?>">
+									<?php echo $t_form_security_field ?>
 									<tr>
 										<input type="hidden" name="file_title_orig" maxlength="30" size="30" value="<?php echo $v_title; ?>" />
 										<input type="hidden" name="file_diskfile_orig" maxlength="250" size="60" value="<?php echo $v_diskfile; ?>" />
