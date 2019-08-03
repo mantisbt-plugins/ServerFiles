@@ -17,7 +17,7 @@ class ServerFilesPlugin extends MantisPlugin
 
         $this->author = "Scott Meesseman";
         $this->contact = "spmeesseman@gmail.com";
-        $this->url = "https://github.com/mantisbt-plugins/mantisbt-plugins";
+        $this->url = "https://github.com/mantisbt-plugins/ServerFiles";
 	}
 
 	function config() {
