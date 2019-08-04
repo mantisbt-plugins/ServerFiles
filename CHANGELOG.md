@@ -1,5 +1,11 @@
 # SERVERFILES CHANGE LOG
 
+## Version 1.0.6 (August 3rd, 2019)
+
+### Bug Fixes
+
+- edit and view threshholds are not being savied in plugin config
+
 ## Version 1.0.5 (August 3rd, 2019)
 
 ### Build System
