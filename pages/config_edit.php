@@ -13,6 +13,7 @@ if ($f_submit_type == plugin_lang_get('update_config'))
 {
     plugin_config_set('edit_threshold', gpc_get_int('edit_threshold_level', ADMINISTRATOR));
     plugin_config_set('view_threshold', gpc_get_int('view_threshold_level', DEVELOPER));
+    $rows_affected = 2;
 }
 else if ($f_submit_type == plugin_lang_get('config_new_file')) 
 {
