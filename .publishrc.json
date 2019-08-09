@@ -8,7 +8,7 @@
         "cmd /c copy /Y LICENSE.txt build\\ServerFiles",
         "cmd /c copy /Y ServerFiles.php build\\ServerFiles",
         "Compress-Archive -Path build\\ServerFiles -Update -CompressionLevel Optimal -DestinationPath build\\ServerFiles.zip",
-        "tar -czf build/ServerFiles.tgz build\\ServerFiles",
+        "tar -C build -czf build/ServerFiles.tgz ServerFiles",
         "cmd /c rmdir /S /Q build\\ServerFiles"
     ],
     "changelogFile":     "CHANGELOG.md",
