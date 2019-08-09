@@ -1,5 +1,11 @@
 # SERVERFILES CHANGE LOG
 
+## Version 1.0.7 (August 8th, 2019)
+
+### Bug Fixes
+
+- tgz release package does not contain the plugin directory as the top level
+
 ## Version 1.0.6 (August 3rd, 2019)
 
 ### Bug Fixes
