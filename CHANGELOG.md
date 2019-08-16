@@ -1,5 +1,15 @@
 # SERVERFILES CHANGE LOG
 
+## Version 1.0.8 (August 15th, 2019)
+
+### Documentation
+
+- **readme:** udpate issues submit section
+
+### Refactoring
+
+- use query binding for all database inserts/updates
+
 ## Version 1.0.7 (August 8th, 2019)
 
 ### Bug Fixes
