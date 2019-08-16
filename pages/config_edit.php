@@ -11,30 +11,38 @@ $rows_affected = 0;
 
 if ($f_submit_type == plugin_lang_get('update_config')) 
 {
-    plugin_config_set('edit_threshold', gpc_get_int('edit_threshold_level', ADMINISTRATOR));
-    plugin_config_set('view_threshold', gpc_get_int('view_threshold_level', DEVELOPER));
+    $f_edit_threshold_level = gpc_get_int('edit_threshold_level');
+    $f_view_threshold_level = gpc_get_int('view_threshold_level');
+    plugin_config_set('edit_threshold', $f_edit_threshold_level);
+    plugin_config_set('view_threshold', $f_view_threshold_level);
     $rows_affected = 2;
 }
 else if ($f_submit_type == plugin_lang_get('config_new_file')) 
 {
-    $query = "INSERT INTO " . plugin_table('file') . "(title, diskfile) VALUES ('" .
-                gpc_get_string('file_title')."', '".gpc_get_string('file_diskfile')."')";
-    $rows = db_query($query);
+    $f_file_diskfile = gpc_get_string('file_diskfile');
+    $f_file_title = gpc_get_string('file_title');
+    $query = "INSERT INTO " . plugin_table('file') . " (title, diskfile) VALUES (?, ?)";
+    $rows = db_query($query, array($f_file_title, $f_file_diskfile));
     $rows_affected = db_num_rows($rows);
 }
 else if ($f_submit_type == plugin_lang_get('config_save_file')) 
 {
-    $query = "UPDATE " . plugin_table('file') . " SET title='" . gpc_get_string('file_title') .
-             "', diskfile='" . gpc_get_string('file_diskfile') . "' WHERE title='" . gpc_get_string('file_title_orig') .
-             "' AND diskfile='" . gpc_get_string('file_diskfile_orig') . "'";
-    $rows = db_query($query);
+    $f_file_diskfile = gpc_get_string('file_diskfile');
+    $f_file_title = gpc_get_string('file_title');
+    $f_file_title_orig = gpc_get_string('file_title_orig');
+    $f_file_diskfile_orig = gpc_get_string('file_diskfile_orig');
+    $query = "UPDATE " . plugin_table('file') . " SET title=?, diskfile=? WHERE title=? AND diskfile=?";
+    $rows = db_query($query, array($f_file_title, $f_file_diskfile, $f_file_title_orig, $f_file_diskfile_orig));
     $rows_affected = db_num_rows($rows);
 }
 else if ($f_submit_type == plugin_lang_get('config_delete_file')) 
 {
-    $query = "DELETE FROM " . plugin_table('file') . " WHERE title='" . gpc_get_string('file_title_orig') .
-             "' AND diskfile='" . gpc_get_string('file_diskfile_orig') . "'";
-    $rows = db_query($query);
+    $f_file_diskfile = gpc_get_string('file_diskfile');
+    $f_file_title = gpc_get_string('file_title');
+    $f_file_title_orig = gpc_get_string('file_title_orig');
+    $f_file_diskfile_orig = gpc_get_string('file_diskfile_orig');
+    $query = "DELETE FROM " . plugin_table('file') . " WHERE title=? AND diskfile=?";
+    $rows = db_query($query, array($f_file_title_orig, $f_file_diskfile_orig));
     $rows_affected = db_num_rows($rows);
 }
 else {
